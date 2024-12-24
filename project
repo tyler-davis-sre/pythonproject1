@@ -1,0 +1,30 @@
+print("Welcome to Pie-thon Pizzaria!" )
+size = input("what size pizza do you want? S, M, or L? ")
+pepperoni = input("Do you want extra pepporoni? Y or N? ")
+cheese = input("Do you want extra cheese today? Y or N? ")
+
+bill = 0
+if size == "S":
+    bill += 8
+elif size == "M":
+     bill += 12
+elif size == "L":
+    bill += 16
+
+else:
+    print("You chose the wrong input. please try again")
+
+
+if pepperoni == "Y":
+    if size == "S":
+        bill += 3
+    else:
+        bill += 4
+
+if cheese == "Y":
+    if size == "S":
+        bill += 3
+    else:
+        bill += 4
+
+print(f"Your total order comes to ${bill} ")
